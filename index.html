@@ -5,35 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vinicius Gabriel</title>
 
-    <link rel="icon" type="image/png" sizes="32x32" href="./Images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
 
     
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
     <header>
-        <div class="navbar">
+        <div class="navbar" id="navbar">
             <button href="main.html" class="navbarLink">
-                <img src="Sobre.png" style="width: 25px; filter: invert(1);">
+                <img src="Sobre.png" style="width: 1.7vw; filter: invert(1);">
                 <p>Sobre</p>
             </button>
 
             <button href="main.html" class="navbarLink">
-                <img src="projetos.png" style="width: 30px; filter: invert(1);">
+                <img src="projetos.png" style="width: 1.9vw; filter: invert(1);">
                 <p>Projetos</p>
             </button>
 
             <button href="main.html" class="navbarLink">
-                <img src="habilidades.png" style="width: 35px; filter: invert(1);">
+                <img src="habilidades.png" style="width: 2vw; filter: invert(1);">
                 <p>Habilidades</p>
             </button>
 
             <button href="main.html" class="navbarLink">
-                <img src="contato.png" style="width: 20px; filter: invert(1);">
+                <img src="contato.png" style="width: 1.6vw; filter: invert(1);">
                 <p>Contato</p>
             </button>
 
@@ -42,7 +43,9 @@
 
     <div class="header">
         <video src="0228(1).mp4" autoplay muted loop class="video"></video>
-        <button class="headerTitle">Vinicius <br>Gabriel</button>
+        <div style="width: 100%;display: flex; justify-content: center; align-items: center; margin-top: 10vw;">
+            <button class="headerTitle">Vinicius <br>Gabriel</button>
+        </div>
         <h1 class="headerTitle2">Programador</h1>
         <ul class="headerTitle3">
             <li>C#</li>
@@ -88,18 +91,51 @@
     </div>
 
     <div class="projetos"">
-        <h1 class="title">Projetos</h1>
+        <h1 class="title"> Meus Projetos</h1>
         <div class="texts">
             <div>
-                <p>Criei diversos projetos, mas até agora publiquei apenas meu principal: <strong>Metamorphosis Warfare</strong>. Cada experiência fortaleceu minhas habilidades e visão criativa, e sigo em busca de novas oportunidades para expandir meu portfólio. E agora estou fazendo esse site do zero com HTML, CSS e JavaScript</p>
+                <p>Criei diversos projetos, mas até agora publiquei apenas meu principal: <strong>Metamorphosis Warfare</strong>. Cada experiência fortaleceu minhas habilidades e visão criativa, e sigo em busca de novas oportunidades para expandir meu portfólio.</p>
             </div>
         </div>
 
-        <h2 class="title" style="font-size: 2vw;">Metamorphosis Warfare</h2>
+        <div class="imagesProjetos">
+
+            <button onclick="prevSlide()" class="controls" style="transform: scaleY(1.4) scaleX(-1);">&#10095;</button>
+
+            <div class="carousel">
+                <div class="carousel-container" id="carouselContainer">
+                    <div class="carousel-item">
+                        <div class="card">
+                            <a href="https://vinicius-gabriell.itch.io/metamorphosis-warfare">
+                                <img src="metamorphosisWarfare.png" class="img">
+                                <h3 class="textCarousel" >Jogo</h3>
+                            </a>
+                        </div>
+                        <div class="card">
+                            <a href="https://vinicius-gabriell.itch.io/metamorphosis-warfare">
+                                <img src="metamorphosisWarfare.png" class="img">
+                                <h3 class="textCarousel">Jogo</h3>
+                            </a>
+                        </div>
+                        <div class="card">
+                            <a href="https://vinicius-gabriell.itch.io/metamorphosis-warfare">
+                                <img src="metamorphosisWarfare.png" class="img">
+                                <h3 class="textCarousel">Jogo</h3>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card">Projeto 4</div>
+                        <div class="card">Projeto 5</div>
+                        <div class="card">Projeto 6</div>
+                    </div>
+                </div>
+            </div>
+
+             <button onclick="nextSlide()" class="controls" style="transform: scaleY(1.4);">&#10095;</button>
+        </div>
     </div>
 
-    <script src="index.js">
-        
-    </script>
+    <script src="index.js"></script>
 </body>
 </html>

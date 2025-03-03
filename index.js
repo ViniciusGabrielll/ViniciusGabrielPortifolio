@@ -25,3 +25,40 @@ document.addEventListener("mousemove", (event) => {
     pupil.style.transform = `translate(-50%, -50%) translate(${pupilX}px, ${pupilY}px)`;
     pupil2.style.transform = `translate(-50%, -50%) translate(${pupilX2}px, ${pupilY2}px)`;
 });
+
+
+
+let lastScrollTop = 0;
+const navbar = document.getElementById("navbar");
+
+window.addEventListener("scroll", function () {
+  let currentScroll = window.scrollY;
+
+  if (currentScroll > lastScrollTop) {
+    // Descendo
+    navbar.style.top = "-60px"; // Esconde a navbar (ajuste conforme necessário)
+  } else {
+    // Subindo
+    navbar.style.top = "0";
+  }
+
+  lastScrollTop = currentScroll;
+});
+
+let currentIndex = 0;
+const totalSlides = 2;
+const container = document.getElementById("carouselContainer");
+
+function nextSlide() {
+    currentIndex = (currentIndex + 1) % totalSlides;
+    updateCarousel();
+}
+
+function prevSlide() {
+    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+    updateCarousel();
+}
+
+function updateCarousel() {
+    container.style.transform = `translateX(-${currentIndex * 100}%)`;
+}

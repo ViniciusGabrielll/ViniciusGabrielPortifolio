@@ -13,10 +13,12 @@ body{
     box-shadow: #fd314f 0px 0px 20px 0.001px;
     padding-left: 8vw;
     z-index: 5;
+
+    transition: top 0.3s ease-in-out;
 }
 
 .navbarLink{
-    font-size: 20px;
+    font-size: 1.5vw;
     font-family: "Roboto", serif;
     gap: 7px;
     font-weight: 500;
@@ -53,14 +55,13 @@ body{
     justify-content: center;
     align-items: center;
     position: absolute;
-    padding-top: 12vw;
+    margin-top: 12vw;
     z-index: 2;
     background: none;
     border: none;
     font-family: "Roboto", serif;
     font-weight: bold;
     cursor: pointer;
-    left: 39vw;
     transition: 0.5s;
 }
 .headerTitle2{
@@ -175,4 +176,85 @@ ul li::marker {
     justify-content: end;
     align-items: end;
     transform: scaleX(-1);
+}
+
+
+.carousel {
+    width: 85%;
+    overflow: hidden;
+    position: relative;
+    padding-top: 1vw;
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    display: flex;
+    justify-content: space-around;
+    min-width: 100%;
+}
+.card{
+    width: 20vw;
+    background-color: #151516;
+    border-radius: 10px;
+    transition:  0.2s;
+}
+.img {
+    width: 20vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition:  0.2s;
+}
+
+.card:hover{
+    width: 20.5vw;
+    box-shadow: #0e0e0f 0px 0px 10px 0px;
+    
+}
+
+.card:hover img{
+    width: 20.5vw;
+    
+}
+
+.controls {
+    width: 5vw;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-size: 2vw;
+    border-radius: 5px;
+    transition: 0.3s;
+    background: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.controls:hover {
+    color: #fd314f;
+}
+
+.imagesProjetos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4vw;
+}
+
+.textCarousel{
+    color: white;
+    font-family: "Roboto", serif;  
+    font-size: 1.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
