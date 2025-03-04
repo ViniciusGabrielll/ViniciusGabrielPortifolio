@@ -62,3 +62,17 @@ function prevSlide() {
 function updateCarousel() {
     container.style.transform = `translateX(-${currentIndex * 100}%)`;
 }
+
+const myObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {  // Corrigido de 'entries' para 'entry'
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    } else {
+      entry.target.classList.remove('show');
+    }
+  });
+});
+
+const elements = document.querySelectorAll('.hidden');  // Corrigido de querySelector para querySelectorAll
+
+elements.forEach((element) => myObserver.observe(element));
