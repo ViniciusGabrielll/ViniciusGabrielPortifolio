@@ -99,7 +99,7 @@ ul li::marker {
 }
 
 .sobreMin{
-    padding-top: 40vw;
+    padding-top: 30vw;
     padding-left: 8vw;
     padding-right: 8vw;
 }
@@ -204,13 +204,18 @@ ul li::marker {
 }
 .img {
     width: 20vw;
+    height: 12vw;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 10px;
     cursor: pointer;
     font-weight: bold;
-    transition:  0.2s;
+    transition:  0.2s; 
+    background-color: #fd314f;
+    background-size: 22vw;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .card:hover{
@@ -219,9 +224,8 @@ ul li::marker {
     
 }
 
-.card:hover img{
+.card:hover .img{
     width: 20.5vw;
-    
 }
 
 .controls {
