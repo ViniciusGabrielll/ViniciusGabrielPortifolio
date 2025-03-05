@@ -63,16 +63,15 @@ function updateCarousel() {
     container.style.transform = `translateX(-${currentIndex * 100}%)`;
 }
 
-const myObserver = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {  // Corrigido de 'entries' para 'entry'
+const myObserver = new IntersectionObserver((entries, observer) => {
+  entries.forEach((entry) => {
     if (entry.isIntersecting) {
-      entry.target.classList.add('show');
-    } else {
-      entry.target.classList.remove('show');
+      entry.target.classList.add('show'); // Adiciona a classe 'show' quando o elemento entra na tela
+      observer.unobserve(entry.target); // Para de observar esse elemento, garantindo que não volte a ser 'hidden'
     }
   });
 });
 
-const elements = document.querySelectorAll('.hidden');  // Corrigido de querySelector para querySelectorAll
+const elements = document.querySelectorAll('.hidden');
 
 elements.forEach((element) => myObserver.observe(element));
