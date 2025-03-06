@@ -75,3 +75,30 @@ const myObserver = new IntersectionObserver((entries, observer) => {
 const elements = document.querySelectorAll('.hidden');
 
 elements.forEach((element) => myObserver.observe(element));
+
+document.querySelector("form").addEventListener("submit", function (event) {
+  event.preventDefault(); // Impede o redirecionamento padrão
+
+  const formData = {
+    accessKey: "381aa9a1-88be-4c4c-b4d4-3351a0b26ab8",
+    name: this.name.value,
+    email: this.email.value,
+    message: this.message.value
+  };
+
+  fetch(this.action, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(formData)
+  })
+  .then(response => response.json())
+  .then(data => {
+    if (data.success) {
+      alert("Obrigado! Sua mensagem foi enviada com sucesso.");
+      this.reset();
+    } else {
+      alert("Erro: " + (data.message || "Não foi possível enviar a mensagem."));
+    }
+  })
+  .catch(() => alert("Erro ao enviar a mensagem. Verifique sua conexão."));
+});
