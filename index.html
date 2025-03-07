@@ -18,22 +18,22 @@
 <body>
     <header>
         <div class="navbar" id="navbar">
-            <button href="main.html" class="navbarLink">
+            <button onclick="scrollToSection('section1')" href="main.html" class="navbarLink">
                 <img src="Sobre.png" style="width: 1.7vw; filter: invert(1);">
                 <p>Sobre</p>
             </button>
 
-            <button href="main.html" class="navbarLink">
+            <button onclick="scrollToSection('section2')" href="main.html" class="navbarLink">
                 <img src="projetos.png" style="width: 1.9vw; filter: invert(1);">
                 <p>Projetos</p>
             </button>
 
-            <button href="main.html" class="navbarLink">
+            <button onclick="scrollToSection('section3')" href="main.html" class="navbarLink">
                 <img src="habilidades.png" style="width: 2vw; filter: invert(1);">
                 <p>Habilidades</p>
             </button>
 
-            <button href="main.html" class="navbarLink">
+            <button onclick="scrollToSection('section4')" href="main.html" class="navbarLink">
                 <img src="contato.png" style="width: 1.6vw; filter: invert(1);">
                 <p>Contato</p>
             </button>
@@ -44,7 +44,7 @@
     <div class="header">
         <video src="0228(1).mp4" autoplay muted loop class="video"></video>
         <div style="width: 100%;display: flex; justify-content: center; align-items: center; margin-top: 10vw;">
-            <button class="headerTitle">Vinicius <br>Gabriel</button>
+            <button class="headerTitle" onclick="scrollToSection('section1')">Vinicius <br>Gabriel</button>
         </div>
         <h1 class="headerTitle2">Programador</h1>
         <ul class="headerTitle3">
@@ -73,6 +73,7 @@
 
     <div class="hidden">
         <div class="sobreMin">
+            <div id="section1"></div>
             <h1 class="title">Sobre mim</h1>
             <div class="texts">
                 <div>
@@ -94,8 +95,8 @@
     </div>
     
     <div class="hidden">
-        <div class="information">
-            <h1 class="title">Meus Projetos</h1>
+        <div class="information" id="section2">
+            <h1 class="title" >Meus Projetos</h1>
             <div class="texts">
                 <div>
                     <p>Criei diversos projetos, mas até agora publiquei apenas meu principal: <strong>Metamorphosis Warfare</strong>. Cada experiência fortaleceu minhas habilidades e visão criativa, e sigo em busca de novas oportunidades para expandir meu portfólio.</p>
@@ -134,16 +135,16 @@
                         <div class="carousel-item">
                             <div class="card">
                                 <a href="https://futuracursossitenaooficial.netlify.app/">
-                                    <div class="img" style="background-image: url(); background-size: 47vw;">
+                                    <div class="img" style="background-image: url(Portifolio.png); background-size: 30vw;">
                                     </div>
-                                    <h3 class="textCarousel" ></h3>
+                                    <h3 class="textCarousel" >WebSite - HTML, CSS, Js</h3>
                                 </a>
                             </div>
                             <div class="card">
-                                <a href="https://futuracursossitenaooficial.netlify.app/">
-                                    <div class="img" style="background-image: url(); background-size: 47vw;">
+                                <a href="https://vinicius-gabriell.itch.io/havenstead">
+                                    <div class="img" style="background-image: url(havenstead.png); background-size: 47vw;">
                                     </div>
-                                    <h3 class="textCarousel" ></h3>
+                                    <h3 class="textCarousel" >Protótipo de jogo - C#</h3>
                                 </a>
                             </div>
                             <div class="card">
@@ -163,7 +164,7 @@
     </div>
 
     <div class="hidden">
-        <div class="information">
+        <div class="information"  id="section3">
             <h1 class="title">Minhas Habilidades</h1>
             <div style="display: flex;">                
                 <div class="texts">
@@ -188,7 +189,7 @@
     <div class="line"></div>
 
     <div class="hidden">
-        <div style="display: flex; justify-content: center; align-items: center;flex-direction: column;" class="information">
+        <div  id="section4" style="display: flex; justify-content: center; align-items: center;flex-direction: column;" class="information">
             <h1 style="margin-bottom: 6vw;" class="title">Contato</h1>
 
 
@@ -210,7 +211,7 @@
             </div>
 
             <section >
-                <h2>Mande um Email!</h2>
+                <h2>Manda um Email!</h2>
                 <form action="https://api.staticforms.xyz/submit" method="post">
                   <label>Nome</label>
                   <input

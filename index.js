@@ -102,3 +102,7 @@ document.querySelector("form").addEventListener("submit", function (event) {
   })
   .catch(() => alert("Erro ao enviar a mensagem. Verifique sua conexão."));
 });
+
+function scrollToSection(id) {
+  document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+} 

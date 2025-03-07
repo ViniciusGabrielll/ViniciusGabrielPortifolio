@@ -1,3 +1,25 @@
+html{
+    scroll-behavior: smooth;
+}
+
+/* Para navegadores baseados em WebKit (Chrome, Edge, Safari, Opera) */
+::-webkit-scrollbar {
+    width: 10px; /* Largura da barra */
+}
+
+::-webkit-scrollbar-track {
+    background: #222; /* Cor do fundo da barra */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #fd314f; /* Cor da barra de rolagem */
+    border-radius: 5px; /* Borda arredondada */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #d22640; /* Cor ao passar o mouse */
+}
+
 body{
     background-color: #1a1a1b;
     margin: 0px;
