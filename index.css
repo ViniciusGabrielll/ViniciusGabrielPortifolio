@@ -19,17 +19,21 @@ html{
 ::-webkit-scrollbar-thumb:hover {
     background: #d22640; /* Cor ao passar o mouse */
 }
-
+ html, body{
+    overflow-x: hidden;
+ }
 body{
     background-color: #1a1a1b;
     margin: 0px;
     font-family: "Roboto", serif;
+    overflow-x: hidden;
+    position: relative;
 }
 
 .hidden {
     opacity: 0;
-    transform: translateY(-20px); /* Inicia acima do seu ponto original */
-    transition: opacity 0.7s ease, transform 0.7s ease; /* Define a animação de transição */
+    transform: translateY(20px); /* Inicia acima do seu ponto original */
+    transition: opacity 1s ease, transform 1s ease; /* Define a animação de transição */
   }
   
   .show {
@@ -44,13 +48,40 @@ body{
     background-color:#fd314f ;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     position: fixed;
     
     box-shadow: #fd314f 0px 0px 20px 0.001px;
-    padding-left: 8vw;
+    
     z-index: 5;
 
     transition: top 0.3s ease-in-out;
+}
+
+.buttonsContainer{
+    height: 60px;
+    display: flex;
+    align-items: center;
+    margin-left: 8vw;
+    
+    z-index: 5;
+}
+
+.linksContainerIcon{
+    margin-right: 8vw;
+}
+
+.linkIcon2{
+    background-color:  #02ced0;
+    border-radius: 2vw;
+    width: 3vw;
+    transition: 0.2s;
+    filter: invert(); 
+    margin-left: 0.5    vw;
+    margin-right: 0.5vw;
+}
+.linkIcon2:hover{
+    background-color: white;
 }
 
 .navbarLink{
@@ -62,8 +93,8 @@ body{
     display: flex;
     align-items: center;
 
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 1vw;
+    padding-right: 1vw;
     color: white;
     background-color: #fd314f;
     height: 100%;
@@ -76,7 +107,7 @@ body{
 }
 
 .video{
-    width: 98.5vw;
+    width: 100%;
     box-shadow: black 0px 20px 5px 1.0px;
     position: absolute;
 }
@@ -85,6 +116,7 @@ body{
     padding-top: 60px;
     display: flex;
 }
+
 .headerTitle{
     font-size: 5vw;
     color: white;
@@ -117,7 +149,7 @@ ul li::marker {
     color: #fd314f !important;
 }
 .headerTitle3{
-    margin-left: 8vw;
+    margin-left: 7vw;
     font-size: 1.5vw;
     color: white;
     position: absolute;
@@ -191,6 +223,46 @@ ul li::marker {
 }
 
 .pupil2 {
+    width: 1vw;
+    height: 1vw;
+    background-color: #000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.eye3 {
+    width: 1.5vw;
+    height: 1.5vw;
+    background-color: #fff;
+    position: absolute;
+    margin-top: 7vw;
+    margin-left: 4.5vw;
+    border: 0.3vw solid #000;
+}
+
+.pupil3 {
+    width: 1vw;
+    height: 1vw;
+    background-color: #000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.eye4 {
+    width: 1.5vw;
+    height: 1.5vw;
+    background-color: #fff;
+    position: absolute;
+    margin-top: 7vw;
+    margin-left: 8vw;
+    border: 0.3vw solid #000;
+}
+
+.pupil4 {
     width: 1vw;
     height: 1vw;
     background-color: #000;
@@ -420,4 +492,78 @@ section {
 }
 .linkIcon:hover{
     background-color: #fd314f;
+}
+
+.Figure1{
+    display: block;
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+
+    .navbarLink{
+        display: none;
+    }
+    
+    .navbar{
+        height: 50px;
+    }
+
+    .header{
+        padding-top: 40px;
+        display: flex;
+    }
+
+    .texts{
+        font-size: 4vw;
+    }
+
+    .title{
+        font-size: 8vw;
+    }
+
+    .video{
+        width: 140vw;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .sobreMin{
+        margin-top: 30vw;
+    }
+
+    .headerTitle{
+        margin-top: 35vw;
+        font-size: 10vw;
+    }.headerTitle:hover{
+        font-size: 10vw;
+    }
+
+    .headerTitle2{
+        font-size: 3.5vw;
+        margin-top: 40vw;
+    }
+
+    .headerTitle3{
+        font-size: 2vw;
+        margin-top: 23vw;
+        margin-left: 1vw;
+    }
+
+    .linkIcon2{
+        width: 7vw;
+    }
+
+    .lateral{
+        display: none;
+    }
+    .lateral2{
+        display: none;
+    }
+
+    .Figure1{
+        display: none;
+    }
 }
