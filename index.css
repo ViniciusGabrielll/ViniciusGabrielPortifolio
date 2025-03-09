@@ -498,7 +498,27 @@ section {
     display: block;
 }
 
+.habilidadesContainer{
+    display: flex;
+    flex-direction: row;
+}
+
+.imagesProjetosCelular{
+    display: none;
+}
+
+.linkProjetosCelular{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 @media (max-width: 768px) {
+
+    .linksContainerIcon{
+        margin-right: 58vw;
+    }
+
     body {
         font-size: 16px;
     }
@@ -548,7 +568,7 @@ section {
 
     .headerTitle3{
         font-size: 2vw;
-        margin-top: 23vw;
+        margin-top: 21vw;
         margin-left: 1vw;
     }
 
@@ -565,5 +585,114 @@ section {
 
     .Figure1{
         display: none;
+    }
+
+    .habilidadesContainer{
+        flex-direction: column;
+    }
+
+    .icon{
+        width: 15vw;
+        padding: 2vw;
+    }
+
+    .bgIcon{
+        background-color: rgb(242, 242, 242);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        border-radius: 1vw;
+        margin-top: 5vw;
+        margin-left: 0vw;
+        margin-right: 0vw;
+        gap: 1vw;
+    }
+
+    .imagesProjetos{
+        display: none;
+    }
+
+    .imagesProjetosCelular{
+        display: grid;
+        justify-items: center;
+        grid-template-columns: 1fr 1fr;
+        margin-left: 8vw;
+        margin-right: 8vw;
+        margin-top: 5vw;
+    }
+
+    .card{
+        width: 35vw;
+        
+        background-color: #000000;
+        border-radius: 10px;
+        transition:  0.2s;
+        margin-bottom: 10vw;
+    }
+
+    .img {
+        width: 35vw;
+        height: 27vw;
+    }
+
+    .textCarousel{
+        font-size: 3vw;
+    }
+
+    .imgContato{
+        width: 30vw;
+    }
+
+    .contatoLink{
+        font-size: 5vw;
+        margin-bottom: 5vw;
+    }
+
+    section {
+        margin-top: 5vw;
+        margin-bottom: 5vw;
+        width: 100%;
+        border-radius: 2vw;
+      }
+      section h2 {
+        font-size: 5vw;
+      }
+      form label {
+        font-size: 4vw;
+        font-weight: 500;
+        margin-bottom: 2vw;
+      }
+      form input {
+        margin-bottom: 5vw;
+        font-size: 3.5vw;
+        padding: 2vw;
+        border-radius: 2vw;
+      }
+      form textarea {
+        padding: 1vw;
+        font-size: 3.5vw;
+        padding: 2vw;
+        border-radius: 2vw;
+      }
+      .btn {
+        padding: 1vw;
+        cursor: pointer;
+        font-size: 5vw;
+        background: #fd314f;
+        border: 0.5vw solid #fd314f;
+        transition: all 0.3s;
+        margin-bottom: 20px;
+        color: white;
+        border-radius: 16px;
+      }
+      .btn:hover {
+        background: #fd314f;
+        color: white;
+        border-radius: 0px;
+      }
+
+    .linkIcon{
+        width: 13vw;
     }
 }
