@@ -5,36 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vinicius Gabriel</title>
 
+    <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     
+    <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
-
-    
+    <!-- CSS principal -->
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
     <header>
-        <div class="navbar" id="navbar">
+        <nav class="navbar" id="navbar">
             <div class="buttonsContainer">      
-                    <button onclick="scrollToSection('section1')" href="main.html" class="navbarLink">
+                    <button onclick="scrollToSection('section1')" class="navbarLink">
                         <img src="Sobre.png" style="width: 1.7vw; filter: invert(1);">
                         <p>Sobre</p>
                     </button>
         
-                    <button onclick="scrollToSection('section2')" href="main.html" class="navbarLink">
+                    <button onclick="scrollToSection('section2')" class="navbarLink">
                         <img src="projetos.png" style="width: 1.9vw; filter: invert(1);">
                         <p>Projetos</p>
                     </button>
         
-                    <button onclick="scrollToSection('section3')" href="main.html" class="navbarLink">
+                    <button onclick="scrollToSection('section3')" class="navbarLink">
                         <img src="habilidades.png" style="width: 2vw; filter: invert(1);">
                         <p>Habilidades</p>
                     </button>
         
-                    <button onclick="scrollToSection('section4')" href="main.html" class="navbarLink">
+                    <button onclick="scrollToSection('section4')" class="navbarLink">
                         <img src="contato.png" style="width: 1.6vw; filter: invert(1);">
                         <p>Contato</p>
                     </button>
@@ -42,22 +43,22 @@
 
             <div class="linksContainerIcon">
                 <a href="https://wa.me/558185832291">    
-                    <img src="telefoneIcon.png" class="linkIcon2">
+                    <img src="telefoneIcon.png" class="linkIcon2" alt="telefone">
                 </a>
 
                 <a href="https://discord.com/users/834572994642575361">
-                    <img src="discord.png" class="linkIcon2">
+                    <img src="discord.png" class="linkIcon2" alt="discord">
                 </a>
 
                 <a href="https://github.com/ViniciusGabrielll">
-                    <img src="github.png" class="linkIcon2">
+                    <img src="github.png" class="linkIcon2" alt="github">
                 </a>
 
                 <a href="https://www.behance.net/viniciusgabriel20">
-                    <img src="behance.png" class="linkIcon2">
+                    <img src="behance.png" class="linkIcon2" alt="behance">
                 </a>
             </div>
-        </div> 
+        </nav> 
     </header>
 
     <div class="header">
@@ -131,22 +132,20 @@
                         <div class="carousel-item">
                             <div class="card">
                                 <a href="https://vinicius-gabriell.itch.io/metamorphosis-warfare">
-                                    <div class="img" style="background-image: url(metamorphosisWarfare.png);">
+                                    <div style="background-image: url(metamorphosisWarfare.png);">
                                     </div>
                                     <h3 class="textCarousel" >Jogo - C#</h3>
                                 </a>
                             </div>
                             <div class="card">
                                 <a href="https://futuracursossitenaooficial.netlify.app/">
-                                    <div class="img" style="background-image: url(bannerFutura.jpg); background-size: 47vw;">
-                                    </div>
+                                    <div style="background-image: url(bannerFutura.jpg); background-size: 47vw;"></div>
                                     <h3 class="textCarousel" >WebSite - HTML, CSS, Js</h3>
                                 </a>
                             </div>
                             <div class="card">
                                 <a href="https://vinicius-gabriell.itch.io/somynus">
-                                    <div class="img" style="background-image: url(Somynus.png); background-size: 30vw;">
-                                    </div>
+                                    <div style="background-image: url(Somynus.png); background-size: 30vw;"></div>
                                     <h3 class="textCarousel" >Jogo - C#</h3>
                                 </a>
                             </div>
@@ -232,7 +231,8 @@
     
                             <br>Além disso, tenho experiência com <strong>C#</strong>, aplicando a linguagem no <strong>desenvolvimento de jogos com Unity 2D</strong>. Posso programar mecânicas de jogo, controlar animações, criar sistemas interativos e estruturar código eficiente para diferentes tipos de gameplay.<br>
                             
-                            <br>Com essas habilidades, sou capaz de desenvolver aplicações web envolventes e jogos interativos, combinando programação e criatividade para criar experiências imersivas.</p>
+                            <br>Com essas habilidades, sou capaz de desenvolver aplicações web envolventes e jogos interativos, combinando programação e criatividade para criar experiências imersivas.
+                        </p>
                     </div>
                 </div>
                 <div class="bgIcon">
@@ -247,69 +247,71 @@
 
     <div class="line"></div>
 
-    <div class="hidden">
-        <div  id="section4" style="display: flex; justify-content: center; align-items: center;flex-direction: column;" class="information">
-            <h1 style="margin-bottom: 6vw;" class="title">Contato</h1>
+    <footer>
+        <div class="hidden">
+            <div  id="section4" style="display: flex; justify-content: center; align-items: center;flex-direction: column;" class="information">
+                <h1 style="margin-bottom: 6vw;" class="title">Contato</h1>
 
 
-            <img src="telefone.png" class="imgContato">
-            <a href="https://wa.me/558185832291" class="contatoLink" class="texts"><strong>+55 98583-2291</strong></a>
+                <img src="telefone.png" class="imgContato">
+                <a href="https://wa.me/558185832291" class="contatoLink" class="texts"><strong>+55 98583-2291</strong></a>
 
-            <div style="margin-top: 5vw;">
-                <a href="https://discord.com/users/834572994642575361">
-                    <img src="discord.png" class="linkIcon">
-                </a>
+                <div style="margin-top: 5vw;">
+                    <a href="https://discord.com/users/834572994642575361">
+                        <img src="discord.png" class="linkIcon">
+                    </a>
 
-                <a href="https://github.com/ViniciusGabrielll">
-                    <img src="github.png" class="linkIcon">
-                </a>
+                    <a href="https://github.com/ViniciusGabrielll">
+                        <img src="github.png" class="linkIcon">
+                    </a>
 
-                <a href="https://www.behance.net/viniciusgabriel20">
-                    <img src="behance.png" class="linkIcon">
-                </a>
-            </div>
+                    <a href="https://www.behance.net/viniciusgabriel20">
+                        <img src="behance.png" class="linkIcon">
+                    </a>
+                </div>
 
-            <section>
-                <h2>Manda um Email!</h2>
-                <form action="https://api.staticforms.xyz/submit" method="post">
-                  <label>Nome</label>
-                  <input
-                    type="text"
-                    name="name"
-                    placeholder="Digite seu nome"
-                    autocomplete="off"
-                    required
-                  />
-                  <label>Email</label>
-                  <input
-                    type="email"
-                    name="email"
-                    placeholder="Digite seu email"
-                    required
-                  />
-    
-                  <label>Mensagem</label>
-                  <textarea
-                    name="message"
-                    cols="30"
-                    rows="10"
-                    placeholder="Digite sua mensagem"
-                    required
-                  ></textarea>
-                  <button type="submit" class="btn">Enviar</button>
+                <section>
+                    <h2>Manda um Email!</h2>
+                    <form action="https://api.staticforms.xyz/submit" method="post">
+                    <label>Nome</label>
+                    <input
+                        type="text"
+                        name="name"
+                        placeholder="Digite seu nome"
+                        autocomplete="off"
+                        required
+                    />
+                    <label>Email</label>
+                    <input
+                        type="email"
+                        name="email"
+                        placeholder="Digite seu email"
+                        required
+                    />
         
-                  <input
-                    type="hidden"
-                    name="accessKey"
-                    value="381aa9a1-88be-4c4c-b4d4-3351a0b26ab8"
-                  />
-                </form>
-              </section>
+                    <label>Mensagem</label>
+                    <textarea
+                        name="message"
+                        cols="30"
+                        rows="10"
+                        placeholder="Digite sua mensagem"
+                        required
+                    ></textarea>
+                    <button type="submit" class="btn">Enviar</button>
+            
+                    <input
+                        type="hidden"
+                        name="accessKey"
+                        value="381aa9a1-88be-4c4c-b4d4-3351a0b26ab8"
+                    />
+                    </form>
+                </section>
 
-              <a href="mailto:vinexgabrielgos@gmail.com" class="contatoLink" style="margin-top: 2vw;">Email: vinexgabrielgos@gmail.com</a>
+                <a href="mailto:vinexgabrielgos@gmail.com" class="contatoLink" style="margin-top: 2vw;">Email: vinexgabrielgos@gmail.com</a>
+                </div>
+            
             </div>
-        
-        </div>
+        </footer>
 
         <div class="line"></div>
 

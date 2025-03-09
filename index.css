@@ -2,6 +2,30 @@ html{
     scroll-behavior: smooth;
 }
 
+html, body{
+overflow-x: hidden;
+}
+
+:root {
+    --primary-color: #fd314f;
+    --dark-background: #1a1a1b;
+    --light-color: white;
+}
+
+/* Aplicando estilo para a cor de texto */
+* {
+    color: var(--light-color);
+    font-family: "Roboto", serif;
+    text-decoration: none;
+}
+
+body{
+    background-color: var(--dark-background);
+    margin: 0px;
+    overflow-x: hidden;
+    position: relative;
+}
+
 /* Para navegadores baseados em WebKit (Chrome, Edge, Safari, Opera) */
 ::-webkit-scrollbar {
     width: 10px; /* Largura da barra */
@@ -12,28 +36,18 @@ html{
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #fd314f; /* Cor da barra de rolagem */
+    background: var(--primary-color); /* Cor da barra de rolagem */
     border-radius: 5px; /* Borda arredondada */
 }
 
 ::-webkit-scrollbar-thumb:hover {
     background: #d22640; /* Cor ao passar o mouse */
 }
- html, body{
-    overflow-x: hidden;
- }
-body{
-    background-color: #1a1a1b;
-    margin: 0px;
-    font-family: "Roboto", serif;
-    overflow-x: hidden;
-    position: relative;
-}
 
 .hidden {
     opacity: 0;
-    transform: translateY(20px); /* Inicia acima do seu ponto original */
-    transition: opacity 1s ease, transform 1s ease; /* Define a animação de transição */
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease; 
   }
   
   .show {
@@ -45,13 +59,13 @@ body{
 .navbar{
     width: 100%;
     height: 60px;
-    background-color:#fd314f ;
+    background-color: var(--primary-color);
     display: flex;
     align-items: center;
     justify-content: space-between;
     position: fixed;
     
-    box-shadow: #fd314f 0px 0px 20px 0.001px;
+    box-shadow: var(--primary-color) 0px 0px 20px 0.001px;
     
     z-index: 5;
 
@@ -77,11 +91,10 @@ body{
     width: 3vw;
     transition: 0.2s;
     filter: invert(); 
-    margin-left: 0.5    vw;
     margin-right: 0.5vw;
 }
 .linkIcon2:hover{
-    background-color: white;
+    background-color: var(--light-color);
 }
 
 .navbarLink{
@@ -95,15 +108,14 @@ body{
 
     padding-left: 1vw;
     padding-right: 1vw;
-    color: white;
-    background-color: #fd314f;
+    background-color: var(--primary-color);;
     height: 100%;
     border: none;
     transition: 0.3s;
 }
 
 .navbarLink:hover{
-    background-color: #d5243e;
+    background-color: var(--primary-color);
 }
 
 .video{
@@ -119,7 +131,6 @@ body{
 
 .headerTitle{
     font-size: 5vw;
-    color: white;
     justify-content: center;
     align-items: center;
     position: absolute;
@@ -127,7 +138,6 @@ body{
     z-index: 2;
     background: none;
     border: none;
-    font-family: "Roboto", serif;
     font-weight: bold;
     cursor: pointer;
     transition: 0.5s;
@@ -135,35 +145,29 @@ body{
 .headerTitle2{
     margin-left: 8vw;
     font-size: 2vw;
-    color: #fd314f;
+    color: var(--primary-color);
     position: absolute;
     margin-top: 22vw;
     z-index: 2;
-    background: none;
-    border: none;
-    font-family: "Roboto", serif;
     font-weight: bold;
 }
 
 ul li::marker {
-    color: #fd314f !important;
+    color: var(--primary-color) !important;
 }
 .headerTitle3{
     margin-left: 7vw;
     font-size: 1.5vw;
-    color: white;
     position: absolute;
     padding-top: 24vw;
     z-index: 2;
     background: none;
     border: none;
-    font-family: "Roboto", serif;
     font-weight: bold;
 }
 .headerTitle:hover{
     font-size: 5.2vw;
     transition: 0.5s;
-
 }
 
 .sobreMin{
@@ -178,16 +182,12 @@ ul li::marker {
 }
 
 .title{
-    color: white;
-    font-family: "Roboto", serif;
     font-size: 4vw;
 }
 .texts{
-    color: white;
     font-size: 1.5vw;
     font-weight: 300;
     line-height: 1.3;
-    font-family: "Roboto", serif;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -196,7 +196,7 @@ ul li::marker {
 .eye {
     width: 1.5vw;
     height: 1.5vw;
-    background-color: #fff;
+    background-color: var(--light-color);
     position: absolute;
     margin-top: 7vw;
     margin-left: 4.5vw;
@@ -215,7 +215,7 @@ ul li::marker {
 .eye2 {
     width: 1.5vw;
     height: 1.5vw;
-    background-color: #fff;
+    background-color: var(--light-color);
     position: absolute;
     margin-top: 7vw;
     margin-left: 8vw;
@@ -223,46 +223,6 @@ ul li::marker {
 }
 
 .pupil2 {
-    width: 1vw;
-    height: 1vw;
-    background-color: #000;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.eye3 {
-    width: 1.5vw;
-    height: 1.5vw;
-    background-color: #fff;
-    position: absolute;
-    margin-top: 7vw;
-    margin-left: 4.5vw;
-    border: 0.3vw solid #000;
-}
-
-.pupil3 {
-    width: 1vw;
-    height: 1vw;
-    background-color: #000;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.eye4 {
-    width: 1.5vw;
-    height: 1.5vw;
-    background-color: #fff;
-    position: absolute;
-    margin-top: 7vw;
-    margin-left: 8vw;
-    border: 0.3vw solid #000;
-}
-
-.pupil4 {
     width: 1vw;
     height: 1vw;
     background-color: #000;
@@ -310,7 +270,8 @@ ul li::marker {
     border-radius: 10px;
     transition:  0.2s;
 }
-.img {
+
+.card div{
     width: 20vw;
     height: 12vw;
     display: flex;
@@ -320,7 +281,7 @@ ul li::marker {
     cursor: pointer;
     font-weight: bold;
     transition:  0.2s; 
-    background-color: #fd314f;
+    background-color: var(--primary-color);
     background-size: 22vw;
     background-repeat: no-repeat;
     background-position: center;
@@ -332,7 +293,7 @@ ul li::marker {
     
 }
 
-.card:hover .img{
+.card:hover div{
     width: 20.5vw;
 }
 
@@ -340,19 +301,14 @@ ul li::marker {
     width: 5vw;
     border: none;
     cursor: pointer;
-    color: white;
     font-size: 2vw;
     border-radius: 5px;
     transition: 0.3s;
     background: none;
 }
 
-a{
-    text-decoration: none;
-}
-
 .controls:hover {
-    color: #fd314f;
+    color: var(--primary-color);
 }
 
 .imagesProjetos{
@@ -363,8 +319,6 @@ a{
 }
 
 .textCarousel{
-    color: white;
-    font-family: "Roboto", serif;  
     font-size: 1.5vw;
     display: flex;
     align-items: center;
@@ -391,8 +345,8 @@ a{
     width: 100%;
     height: 0.5vw;
     z-index: 0;
-    background-color: #fd314f;
-    box-shadow: #fd314f 0px 0px 20px 0.001px;
+    background-color: var(--primary-color);
+    box-shadow: var(--primary-color) 0px 0px 20px 0.001px;
 }
 
 .imgContato {
@@ -414,6 +368,7 @@ section {
   }
   section h2 {
     font-size: 2vw;
+    color: black;
   }
   section form {
     display: flex;
@@ -423,6 +378,7 @@ section {
   form label {
     font-size: 1.2vw;
     margin-bottom: 0.7vw;
+    color: black;
   }
   form input {
     padding: 1vw;
@@ -464,24 +420,24 @@ section {
     cursor: pointer;
     font-size: 1.2vw;
     background: transparent;
-    border: 0.15vw solid #fd314f;
+    border: 0.15vw solid var(--primary-color);
+    color: black;
     transition: all 0.3s;
     margin-bottom: 20px;
   }
   .btn:hover {
-    background: #fd314f;
+    background: var(--primary-color);
     color: white;
     border-radius: 16px;
   }
 
   .contatoLink{
     font-size: 2vw;
-    color: white;
     transition: 0.2s;
   }
 
   .contatoLink:hover{
-    color: #fd314f;
+    color: var(--primary-color);
   }
 
 .linkIcon{
@@ -491,7 +447,7 @@ section {
     transition: 0.2s;
 }
 .linkIcon:hover{
-    background-color: #fd314f;
+    background-color: var(--primary-color);
 }
 
 .Figure1{
@@ -631,7 +587,7 @@ section {
         margin-bottom: 10vw;
     }
 
-    .img {
+    .card div {
         width: 35vw;
         height: 27vw;
     }
@@ -677,18 +633,14 @@ section {
       }
       .btn {
         padding: 1vw;
-        cursor: pointer;
         font-size: 5vw;
-        background: #fd314f;
-        border: 0.5vw solid #fd314f;
-        transition: all 0.3s;
+        background: var(--primary-color);
+        border: 0.5vw solid var(--primary-color);
         margin-bottom: 20px;
-        color: white;
+        color: var(--light-color);
         border-radius: 16px;
       }
       .btn:hover {
-        background: #fd314f;
-        color: white;
         border-radius: 0px;
       }
 
